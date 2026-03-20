@@ -1,0 +1,199 @@
+:root {
+  --game-font: "Kirang Haerang";
+}
+
+* {
+  font-family: var(--game-font), system-ui;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#beginning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+#theme {
+  width: 240px;
+  height: 60px;
+  background-color: blue;
+  font-size: 20px;
+}
+
+#title {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+#start {
+  width: 240px;
+  height: 60px;
+  background-color: green;
+  font-size: 25px;
+}
+
+#gamewindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+#control-box{
+  display:grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-right: 50px;
+}
+
+#level{
+  grid-column: span 2;
+}
+
+#hint-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #FCF9EA;
+  height: 10vh;
+  width: 380px;
+  border-bottom: 3px dotted #C9B59C;
+
+}
+
+#match-box {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(3, minmax(25px, 1fr));
+  grid-auto-rows: 25px;
+}
+
+#one {
+  background-color: #0992C2;
+}
+
+#two {
+  background-color: #427A43;
+}
+
+#three {
+  background-color: #B500B2;
+}
+
+#four {
+  background-color: #FF5B5B;
+}
+
+#gamebox {
+  display: grid;
+  grid-template-columns: repeat(3, 125px);
+  grid-auto-rows: 125px;
+  gap: 2px;
+  width: 100%;
+  background-color: whitesmoke;
+  padding-top: 8px;
+}
+
+#game-container {
+  position: relative;
+  top: 10%;
+}
+
+#box1 {
+  background-color: #F68048;
+}
+
+#box2 {
+  background-color: #25343F;
+}
+
+#box3 {
+  background-color: #740A03;
+}
+
+#box4 {
+  background-color: #E4FF30;
+}
+
+#submit {
+  background-color: cyan;
+  height: 20px;
+  width: 50px;
+  margin-right: 20px;
+  border-radius: 2px;
+}
+
+#submit:active {
+  background-color: #008cb4;
+
+}
+
+#skip {
+  background-color: cyan;
+  height: 20px;
+  width: 50px;
+  margin-right: 20px;
+  border-radius: 2px;
+}
+
+#skip:active {
+  background-color: #008cb4;
+
+}
+
+
+@keyframes color {
+  0% {
+    background: #EDEDCE;
+  }
+
+  20% {
+    background: #740A03;
+  }
+
+  40% {
+    background: #4D2B8C;
+  }
+
+  60% {
+    background: #2D3C59;
+  }
+
+  80% {
+    background: #FBE580;
+  }
+
+  100% {
+    background: #7AE2CF;
+  }
+}
+
+body {
+  background: #33CCCC;
+  /* Fallback */
+  animation: color 60s infinite linear;
+  text-align: center;
+}
